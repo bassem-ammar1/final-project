@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<lang="en">
+<html>
+    <head>
+        <title>
+            Task Manager
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+
+    </head>
+    <body class="light-theme" id="body">
+        <div class="container">
+            <header class="header">
+                <h1>To-Do List</h1>
+            <button class="theme-toggle" id="theme_toggle" onclick="toggleTheme()">
+              <span id="theme_icon" >🌙</span></button>
+            </header>
+
+            <span class="task-form">
+            <input id="task_input"
+                class="holder"   
+                type="text"                
+                placeholder="Add a new task..." 
+                required
+                maxlength="100">
+              <br>
+            <button type="submit" onclick="displayTask()" class="add-btn">Add Task</button>
+                 </span>
+
+        
+         <div class="tasks-container">
+           <ul  class="task-list" id="task_list" >
+            <!-- Tasks  will be displayed here --> 
+            <span class="initial-text" id="initial_text">No tasks yet. Add your first task above!</span></ul>            
+          </div>
+          <footer class="footer">
+          <p><Strong>Total Tasks: <span id="total_tasks">0</span></p>
+          <p>Completed Tasks: <span id="completed_tasks">0</span></p></strong></footer> 
+        <script src="./script.js"></script>
+        
+    </body>
+    </html>
